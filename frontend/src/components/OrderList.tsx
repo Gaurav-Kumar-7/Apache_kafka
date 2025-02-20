@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 interface Order {
-  id: string;
-  details: string;
+  _id: string;
+  product: string;
 }
 
 const OrderList: React.FC = () => {
@@ -26,8 +26,8 @@ const OrderList: React.FC = () => {
     <div>
       <h1>Order List</h1>
       <ul>
-        {orders.map((order) => (
-          <li key={order.id}>{order.details}</li>
+      {orders.map((order) => (
+          <li key={order._id}>{order.product}</li>
         ))}
       </ul>
     </div>
